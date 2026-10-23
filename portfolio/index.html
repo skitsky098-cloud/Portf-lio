@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio pessoal de Wiliam, estudante de Desenvolvimento de Sistemas.">
+    <title>Wiliam Albuquerque | Portfólio Dev</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body id="topo">
+
+    <header>
+        <nav class="navegacao" aria-label="Menu principal">
+            <a class="logo" href="#inicio">Wiliam.dev</a>
+
+            <button id="botaoMenu" class="botao-menu"
+                aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="listaMenu">☰</button>
+
+            <ul id="listaMenu" class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+            <button id="botaoTema" class="botao-tema"
+                aria-label="Alternar tema claro e escuro">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="inicio">
+            <div class="inicio-texto">
+                <p id="saudacao">Olá!</p>
+                <h1>Eu sou Wiliam Albuquerque</h1>
+                <h2>Estudante de Desenvolvimento de Sistemas</h2>
+                <p>
+                    Estou aprendendo programação e desenvolvendo
+                    projetos para construir minha carreira na tecnologia.
+                </p>
+                <a class="botao" href="#projetos">Ver meus projetos</a>
+            </div>
+
+            <div class="avatar" role="img"
+                aria-label="Avatar representando um desenvolvedor">
+                💻
+            </div>
+        </section>
+
+        <section id="sobre" class="secao">
+            <h2>Sobre mim</h2>
+            <p>
+                Sou estudante do curso Técnico em Desenvolvimento de
+                Sistemas no SENAC MedTec. Estou aprendendo a criar páginas
+                web e a entender como os sites funcionam.
+            </p>
+            <p>
+                Escolhi estudar tecnologia porque quero desenvolver
+                minhas habilidades em programação, aprender JavaScript
+                e criar projetos que possam me ajudar a entrar no mercado
+                de trabalho.
+            </p>
+        </section>
+
+        <section id="habilidades" class="secao">
+            <h2>Minhas habilidades</h2>
+
+            <div class="habilidades-lista">
+                <article class="habilidade">
+                    <h3>HTML</h3>
+                    <p>Nível: praticando</p>
+                </article>
+
+                <article class="habilidade">
+                    <h3>CSS</h3>
+                    <p>Nível: iniciante</p>
+                </article>
+
+                <article class="habilidade">
+                    <h3>JavaScript</h3>
+                    <p>Nível: iniciante</p>
+                </article>
+
+                <article class="habilidade">
+                    <h3>VS Code</h3>
+                    <p>Nível: praticando</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projetos" class="secao">
+            <h2>Meus projetos</h2>
+            <p>Alguns trabalhos que estou desenvolvendo durante o curso.</p>
+
+            <div class="projetos-lista">
+                <article class="projeto">
+                    <div class="projeto-imagem" role="img"
+                        aria-label="Símbolo de página web">🌐</div>
+                    <h3>Minha primeira página</h3>
+                    <p>Uma página criada para praticar a estrutura HTML.</p>
+                    <p><strong>Tecnologias:</strong> HTML</p>
+                    <span>Projeto de estudo</span>
+                </article>
+
+                <article class="projeto">
+                    <div class="projeto-imagem" role="img"
+                        aria-label="Símbolo de design">🎨</div>
+                    <h3>Página estilizada</h3>
+                    <p>Exercício de cores, fontes e organização visual.</p>
+                    <p><strong>Tecnologias:</strong> HTML e CSS</p>
+                    <span>Projeto de estudo</span>
+                </article>
+
+                <article class="projeto">
+                    <div class="projeto-imagem" role="img"
+                        aria-label="Símbolo de código">⚙️</div>
+                    <h3>Exercícios interativos</h3>
+                    <p>Práticas de lógica e interatividade em páginas web.</p>
+                    <p><strong>Tecnologias:</strong> JavaScript</p>
+                    <span>Em desenvolvimento</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato" class="secao">
+            <h2>Entre em contato</h2>
+            <p>
+                Preencha o formulário fictício para testar a validação.
+                Ele não envia seus dados para nenhum servidor.
+            </p>
+
+            <form id="formularioContato" novalidate>
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome"
+                        autocomplete="name" required>
+                    <small id="erroNome" class="erro"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email"
+                        autocomplete="email" required>
+                    <small id="erroEmail" class="erro"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem"
+                        rows="5" required></textarea>
+                    <small id="erroMensagem" class="erro"></small>
+                </div>
+
+                <div class="campo consentimento">
+                    <input type="checkbox" id="consentimento"
+                        name="consentimento" required>
+                    <label for="consentimento">
+                        Concordo com o uso dos dados apenas para
+                        a finalidade de contato deste formulário.
+                    </label>
+                    <small id="erroConsentimento" class="erro"></small>
+                </div>
+
+                <button class="botao" type="submit">Validar formulário</button>
+                <p id="resultadoFormulario" role="status"
+                    aria-live="polite"></p>
+            </form>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/skitsky098-cloud" target="_blank"
+                    rel="noopener noreferrer">Visitar GitHub</a>
+            </p>
+            <p>LinkedIn: perfil ainda não informado.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anoAtual"></span> Wiliam Albuquerque</p>
+        <a href="#topo">Voltar ao topo ↑</a>
+  
+         <div class="avatar">
+        <img src="img/minha-foto.jpg"
+             alt="Foto de Wiliam Albuquerque">
+    </div>
+</section>
